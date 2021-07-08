@@ -138,7 +138,7 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
                         car.setId(map.get("id").toString());
                         car.setBrand(map.get("brand").toString());
                         car.setConstructionYear(map.get("constractionYear") != null ? map.get("constractionYear").toString() : "");
-                        car.setIsUsed(map.get("isUsed") != null ? map.get("isUsed").toString() : "");
+                        car.setIsUsed(map.get("isUsed") != null ? (map.get("isUsed").equals("true") ? "Used" : "New") : "");
                         car.setImageUrl(map.get("imageUrl") != null ? map.get("imageUrl").toString() : "");
                         carsList.add(car);
                     }
